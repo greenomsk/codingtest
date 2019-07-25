@@ -1,0 +1,7 @@
+jdbc:
+  driver.class.name: org.h2.Driver
+  url: jdbc:h2:mem:codingtest;DB_CLOSE_DELAY=-1
+  user:
+  password:
+
+game.strategy: game.strategy.markov.chain

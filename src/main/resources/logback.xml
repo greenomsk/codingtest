@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/scissors-rock-paper.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>logs/scissors-rock-paper.%i.log</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>32</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>16MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <charset>utf-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] \(%t:%c{0}\) %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SPRING_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/spring.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>logs/spring.%i.log</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>32</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>16MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <charset>utf-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] \(%t:%c{0}\) %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger level="TRACE" name="com.green.codingtest.srp" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <logger level="DEBUG" name="org.springframework" additivity="false">
+        <appender-ref ref="SPRING_LOG_FILE"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>

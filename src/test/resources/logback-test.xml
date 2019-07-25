@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] \(%t:%c{0}\) %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger level="INFO" name="org.springframework" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
