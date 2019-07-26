@@ -1,7 +1,9 @@
 package com.green.codingtest.srp.service.exception;
 
 /**
- * class ValidationException
+ * <h2>class ValidationException</h2>
+ *
+ * {@link RuntimeException} implementation intended to process any validation errors.
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 23.07.2019

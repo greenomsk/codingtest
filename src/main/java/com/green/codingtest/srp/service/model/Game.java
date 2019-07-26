@@ -5,7 +5,9 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 
 /**
- * class Game
+ * <h2>class Game</h2>
+ *
+ * Game model.
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 24.07.2019

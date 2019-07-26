@@ -14,7 +14,9 @@ import static org.jooq.impl.DSL.currentTimestamp;
 import static org.jooq.impl.DSL.val;
 
 /**
- * class GameDaoImpl
+ * <h2>class GameDaoImpl</h2>
+ *
+ * Concrete {@link GameDao} implementation based on Jooq framework.
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 24.07.2019

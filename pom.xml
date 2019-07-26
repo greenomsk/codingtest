@@ -21,6 +21,8 @@
         <version.flyway>5.0.3</version.flyway>
         <version.swagger>2.9.2</version.swagger>
         <version.mockito>1.10.19</version.mockito>
+        <version.yaml>1.24</version.yaml>
+        <version.xnio>3.7.2.Final</version.xnio>
     </properties>
 
     <dependencies>
@@ -101,6 +103,16 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${version.swagger}</version>
         </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${version.yaml}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.xnio</groupId>
+            <artifactId>xnio-nio</artifactId>
+            <version>${version.xnio}</version>
+        </dependency>
 
 
         <dependency>
@@ -126,18 +138,6 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <inherited>true</inherited>
-                <configuration>
-                    <suppressionsLocation>checkstyle/suppressions.xml</suppressionsLocation>
-                    <suppressionsFileExpression>checkstyle.suppressions.files</suppressionsFileExpression>
-                    <propertyExpansion>
-                        checkstyle.suppressions.file=${project.build.directory}/checkstyle-suppressions.xml
-                    </propertyExpansion>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -199,6 +199,36 @@
                             <overWriteIfNewer>true</overWriteIfNewer>
                             <excludeScope>test</excludeScope>
                             <includeScope>compile</includeScope>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources-to-config</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <overwrite>true</overwrite>
+                            <outputDirectory>
+                                ${project.build.directory}/${project.build.finalName}/config
+                            </outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>logback.xml</include>
+                                        <include>application.yaml</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
                         </configuration>
                     </execution>
                 </executions>

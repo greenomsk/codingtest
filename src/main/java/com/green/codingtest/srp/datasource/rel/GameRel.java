@@ -12,7 +12,9 @@ import static org.jooq.impl.SQLDataType.TIMESTAMP;
 import static org.jooq.impl.SQLDataType.VARCHAR;
 
 /**
- * class GameRel
+ * <h2>class GameRel</h2>
+ *
+ * Describes game table fields to operate with Jooq framework
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 24.07.2019

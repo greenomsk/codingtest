@@ -5,7 +5,9 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 
 /**
- * class TotalScore
+ * <h2>class TotalScore</h2>
+ *
+ * Total game score representation model
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 23.07.2019

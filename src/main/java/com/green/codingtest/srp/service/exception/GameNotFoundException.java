@@ -1,7 +1,9 @@
 package com.green.codingtest.srp.service.exception;
 
 /**
- * class GameNotFoundException
+ * <h2>class GameNotFoundException</h2>
+ *
+ * {@link RuntimeException} implementation intended to process game not found case.
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 24.07.2019

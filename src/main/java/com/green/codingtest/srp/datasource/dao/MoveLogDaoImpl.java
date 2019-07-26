@@ -16,7 +16,9 @@ import static org.jooq.impl.DSL.currentTimestamp;
 import static org.jooq.impl.DSL.val;
 
 /**
- * class MoveLogDaoImpl
+ * <h2>class MoveLogDaoImpl</h2>
+ *
+ * Concrete {@link MoveLogDao} implementation based on Jooq framework.
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 23.07.2019

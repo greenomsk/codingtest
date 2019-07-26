@@ -8,7 +8,9 @@ import org.springframework.stereotype.Component;
 import java.util.Random;
 
 /**
- * class RandomGameStrategy
+ * <h2>class RandomGameStrategy</h2>
+ *
+ * Concrete {@link GameStrategy} implementation. Returns random opponent gesture.
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 23.07.2019

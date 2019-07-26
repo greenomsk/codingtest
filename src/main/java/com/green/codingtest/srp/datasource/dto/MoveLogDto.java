@@ -7,7 +7,9 @@ import lombok.experimental.Accessors;
 import java.sql.Timestamp;
 
 /**
- * class MoveLogDto
+ * <h2>class MoveLogDto</h2>
+ *
+ * Move log data transfer object
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 23.07.2019

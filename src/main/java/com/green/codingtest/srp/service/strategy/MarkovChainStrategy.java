@@ -19,8 +19,11 @@ import static java.util.stream.Collectors.toList;
 import static org.springframework.util.CollectionUtils.isEmpty;
 
 /**
- * class MarkovChainStrategy
+ * <h2>class MarkovChainStrategy</h2>
  *
+ * Concrete {@link GameStrategy} implementation.
+ * Returns opponent strategy by analysing previous player moves basing on Markov chain algorithm.
+
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 25.07.2019
  */

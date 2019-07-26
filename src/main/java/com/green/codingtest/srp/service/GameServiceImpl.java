@@ -23,7 +23,10 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * class GameServiceImpl
+ * <h2>class GameServiceImpl</h2>
+ *
+ * {@link GameService} concrete implementation. Contains and manages all necessary information to provide game flow.
+ * I.e. game rule, game strategy, DAO objects to store game flow information.
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 23.07.2019
@@ -40,6 +43,15 @@ public class GameServiceImpl implements GameService {
 
     private final GameRules gameRules;
 
+    /**
+     * class constructor
+     *
+     * @param moveLogDao {@link MoveLogDao} DAO object intended to access to all moves related to game.
+     * @param gameDao {@link GameDao} DAO object intended to access game information.
+     * @param strategyFactory {@link GameStrategyFactory} intended to access currently choosen
+     * {@link com.green.codingtest.srp.service.strategy.GameStrategy}
+     * @param gameRules {@link GameRules} game rules.
+     */
     @Inject
     public GameServiceImpl(
         final MoveLogDao moveLogDao,

@@ -8,7 +8,12 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * class GameStrategyFactoryImpl
+ * <h2>class GameStrategyFactoryImpl</h2>
+ *
+ * Concrete {@link GameStrategyFactory} implementation.
+ * Provides with {@link GameStrategy} by using configured game strategy id.
+ *
+ * @see GameStrategy#id()
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 25.07.2019
@@ -18,6 +23,12 @@ public class GameStrategyFactoryImpl implements GameStrategyFactory {
 
     private final GameStrategy strategy;
 
+    /**
+     * Class constructor.
+     *
+     * @param strategyId strategy identifier to choose strategy from strategies list.
+     * @param strategies list of strategies defined in project.
+     */
     @Inject
     public GameStrategyFactoryImpl(
         @Value("${game.strategy}") String strategyId,

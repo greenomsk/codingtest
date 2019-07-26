@@ -12,7 +12,9 @@ import java.util.stream.Stream;
 import static java.util.Objects.isNull;
 
 /**
- * class GameRulesImpl
+ * <h2>class GameRulesImpl</h2>
+ *
+ * {@link GameRules} concrete implementation
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 25.07.2019

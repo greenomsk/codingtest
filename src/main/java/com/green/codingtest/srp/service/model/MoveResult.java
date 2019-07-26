@@ -6,7 +6,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
- * class MoveResult
+ * <h2>class MoveResult</h2>
+ *
+ * Move result model
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 23.07.2019

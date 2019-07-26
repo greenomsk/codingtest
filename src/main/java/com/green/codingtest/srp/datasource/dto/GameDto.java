@@ -7,7 +7,9 @@ import lombok.experimental.Accessors;
 import java.sql.Timestamp;
 
 /**
- * class GameDto
+ * <h2>class GameDto</h2>
+ *
+ * Game data transfer object
  *
  * @author <a href="mailto:greenomsk@gmail.com">Andrey Grinenko</a>
  * @since 24.07.2019
